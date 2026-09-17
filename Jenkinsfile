@@ -14,10 +14,9 @@ pipeline {
         }
         stage('Send Notification') {
             steps {
-                mail to: 'diwakar.s2024a@vitstudent.ac.in',
-                     
+                mail to: 'your-email@gmail.com',
                      subject: "Build Notification: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                     body: "The build for ${env.JOB_NAME} has completed.\n\nCheck it here: ${env.BUILD_URL}"
+                     body: "The build for ${env.JOB_NAME} has completed successfully.\n\nCheck details here: ${env.BUILD_URL}"
             }
         }
     }
